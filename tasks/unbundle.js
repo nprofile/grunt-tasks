@@ -8,10 +8,9 @@ module.exports = function (grunt) {
   var xml2js  = require('xml2js');
 
   // Custom Utils
-  var WroUtils  = require'../utils/wro4j');
-
-  // Extractions from Utils
-  var log       = require('../utils').log;
+  var custUtils = require('../utils');
+  var WroUtils  = custUtils.wro4j;
+  var log       = custUtils.log;
 
   // Grunt Util Shortcuts
   var task      = grunt.task;

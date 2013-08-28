@@ -1,12 +1,6 @@
 module.exports = function (grunt) {
 
   "use strict";
-  var log = function ( obj ){
-    if(_.isObject(obj) || _.isArray(obj)){
-      obj = JSON.stringify(obj);
-    }
-    grunt.log.writeln(obj);
-  };
 
   var _     = require("underscore");
   var fs    = require('fs');
@@ -17,7 +11,10 @@ module.exports = function (grunt) {
   var xml2js  = require('xml2js');
   var process = grunt.template.process;
 
-  var WroUtils = require('../utils').wro4j;
+  // Custom Utils
+  var custUtils = require('../utils');
+  var WroUtils  = custUtils.wro4j;
+  var log       = custUtils.log;
 
   // Concat source files and/or directives.
   grunt.registerHelper('concatSourceURL', function(files, options) {
