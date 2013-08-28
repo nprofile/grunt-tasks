@@ -1,7 +1,7 @@
 var _ = require('underscore');
 var path = require('path');
 
-var tasksDir = __dirname + '/tasks'
+var tasksDir = __dirname + '/tasks';
 var tasksModules = require('fs').readdirSync(tasksDir);
 
 module.exports.tasks = {};
@@ -12,11 +12,9 @@ _.each(tasksModules, function(name) {
     return;
   }
 
-  // Ex. build/config/copy/less.js
-  module.exports.tasks = _.extend(
-    module.exports.tasks,
-    require(tasksDir + '/' + path.basename(name, '.js'))
-  );
+  var taskName = path.basename(name, '.js');
+  module.exports.tasks[taskName] = require(tasksDir + '/' + taskName);
+
 });
 
 module.exports.utils = require('./utils');
