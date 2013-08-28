@@ -15,7 +15,7 @@ _.each(tasksModules, function(name) {
   // Ex. build/config/copy/less.js
   module.exports.tasks = _.extend(
     module.exports.tasks,
-    require(tasksDir + '/' + name)
+    require(tasksDir + '/' + path.basename(name, '.js'))
   );
 });
 
