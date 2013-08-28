@@ -17,7 +17,7 @@ module.exports = function (grunt) {
   var xml2js  = require('xml2js');
   var process = grunt.template.process;
 
-  var WroUtils = require(__dirname+'/utils/wro4j');
+  var WroUtils = require('../utils').wro4j;
 
   // Concat source files and/or directives.
   grunt.registerHelper('concatSourceURL', function(files, options) {

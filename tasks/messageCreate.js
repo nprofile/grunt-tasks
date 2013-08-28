@@ -13,11 +13,8 @@ module.exports = function (grunt) {
   var asyncUtil = grunt.utils.async;
   var fileUtil  = grunt.file;
 
-  // Custom Utils
-  var LogUtil   = require(__dirname+'/utils/log');
-
   // Extractions from Utils
-  var log = LogUtil.log;
+  var log       = require('../utils').log;
 
   /**
    * Currently there is logic "baked" into the Parser 'createErrorMessages' task that involves writing a concatenated

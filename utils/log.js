@@ -7,7 +7,7 @@ var grunt = require('grunt');
  */
 module.exports = function ( obj ){
   if(_.isObject(obj) || _.isArray(obj)){
-    obj = JSON.stringify(obj);
+    obj = JSON.stringify(obj, null, 2);
   }
   grunt.log.writeln(obj);
 };
