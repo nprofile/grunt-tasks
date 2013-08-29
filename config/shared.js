@@ -1,4 +1,4 @@
-exports.module = {
+module.exports = {
   pkg: '<json:package.json>',
   meta: {
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
