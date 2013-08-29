@@ -1,7 +1,7 @@
 var _ = require('underscore');
 var path = require('path');
 
-var tasksDir = __dirname + '/tasks';
+var tasksDir = path.resolve(__dirname,'lib/tasks');
 var tasksModules = require('fs').readdirSync(tasksDir);
 
 module.exports.tasks = {};
@@ -13,10 +13,10 @@ _.each(tasksModules, function(name) {
   }
 
   var taskName = path.basename(name, '.js');
-  module.exports.tasks[taskName] = require(tasksDir + '/' + taskName);
+  module.exports.tasks[taskName] = require(path.resolve(tasksDir,taskName));
 
 });
 
-module.exports.utils = require('./utils');
+module.exports.utils = require('./lib/utils');
 
-module.exports.config = require('./config');
+module.exports.config = require('./lib/config');
