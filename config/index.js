@@ -38,7 +38,7 @@ module.exports = function(configDir) {
   return _.extend(
     {},
     // Include the source paths config first so other configs can reference it
-    require(path.resolve(configDir,'src'),
+    require(path.resolve(configDir,'src')),
     // ... import shared config
     require('./shared'),
     // ... import project config
