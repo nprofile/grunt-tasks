@@ -18,3 +18,5 @@ _.each(tasksModules, function(name) {
 });
 
 module.exports.utils = require('./utils');
+
+module.exports.config = require('./config');
