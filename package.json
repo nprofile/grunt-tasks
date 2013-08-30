@@ -25,7 +25,9 @@
   },
   "devDependencies": {
     "grunt": "0.3.17",
-    "underscore": "*"
+    "xml2js": "~0.2.8",
+    "growl": "~1.7.0",
+    "underscore": "~1.5.1"
   },
   "keywords": [
     "gruntplugin"
