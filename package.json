@@ -1,7 +1,7 @@
 {
   "name": "grunt-tasks",
   "description": "NProfile Custom Grunt Tasks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/nprofile/grunt-tasks",
   "author": {
     "name": "NProfile Team",
