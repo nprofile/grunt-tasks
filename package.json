@@ -24,7 +24,8 @@
     "rimraf": "~2.2.1",
     "xml2js": "~0.2.8",
     "growl": "~1.7.0",
-    "underscore": "~1.5.1"
+    "underscore": "~1.5.1",
+    "handlebars": "~1.0.9"  
   },
   "devDependencies": {
     "grunt": "0.3.17"
